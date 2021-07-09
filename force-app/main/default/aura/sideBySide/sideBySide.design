@@ -1,0 +1,4 @@
+<design:component label="Side by Side">
+	<design:attribute name="childRecordId" label="Child RecordId" />
+    <design:attribute name="parentRecordId" label="Parent RecordId" />
+</design:component>

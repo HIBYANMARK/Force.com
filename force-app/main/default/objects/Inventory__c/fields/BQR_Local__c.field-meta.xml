@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BQR_Local__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Local BQR rep for system.</description>
+    <externalId>false</externalId>
+    <label>BQR Local</label>
+    <referenceTo>User</referenceTo>
+    <relationshipLabel>Inventories (BQR Local)</relationshipLabel>
+    <relationshipName>Inventories1</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

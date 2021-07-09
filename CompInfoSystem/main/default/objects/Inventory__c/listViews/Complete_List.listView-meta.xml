@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complete_List</fullName>
+    <columns>NAME</columns>
+    <columns>MyAppsID__c</columns>
+    <columns>SystemName__c</columns>
+    <columns>Vendor_Name__c</columns>
+    <columns>GxP_Criticality__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>Complete List</label>
+</ListView>

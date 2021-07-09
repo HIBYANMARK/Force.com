@@ -1,0 +1,21 @@
+<aura:component implements="lightning:availableForFlowScreens">
+	<aura:attribute name="childRecordId" type="String"/>
+    <aura:attribute name="parentRecordId" type="String"/>
+
+    <lightning:layout>
+        <lightning:layoutItem size="6" padding="around-small">
+            <c:recordDetailFlowScreenComponent recordId="{!v.parentRecordId}"
+                                               mode ="View"
+                                               objectApiName="Inventory__c"
+                                               fields="Name,TSO_Local__c,SystemName__c,BQR_Local__c,MyAppsID__c ,BSO_Local__c,GxP_Criticality__c,Vendor_Name__c,GxP_ID__c,Software_Name__c,ERES_ID__c,Software_Version__c,ERES__c,System_Type__c,eSIG__c,WebBrowser__c,Description__c,Comments__c">
+            </c:recordDetailFlowScreenComponent>
+        </lightning:layoutItem>
+        <lightning:layoutItem size="6" padding="around-small">
+            <c:recordDetailFlowScreenComponent recordId="{!v.childRecordId}"
+                                               mode ="Edit"
+                                               objectApiName="Inventory_Change_Request__c"
+                                               fields="Name,TSO_Local__c,SystemName__c,BQR_Local__c,MyAppsID__c ,BSO_Local__c,GxP_Criticality__c,Vendor_Name__c,GxP_ID__c,Software_Name__c,ERES_ID__c,Software_Version__c,ERES__c,System_Type__c,eSIG__c,WebBrowser__c,Description__c,Comments__c">
+            </c:recordDetailFlowScreenComponent>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

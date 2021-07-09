@@ -1,0 +1,62 @@
+<aura:component controller="ReAuthController" 
+                implements="flexipage:availableForAllPageTypes,force:hasRecordId" >
+    
+    <!-- input attributes -->
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="fieldName" type="String"/>
+    <aura:attribute name="title" type="String"/>
+    <aura:attribute name="passwordLabel" type="String" default="Enter Password"/>
+    <aura:attribute name="buttonLabel" type="String" default="Approve"/>
+    <aura:attribute name="buttonDeclineLabel" type="String" default="Decline"/>
+    
+    <!-- private attributes -->
+    <aura:attribute name="password" type="String"/>
+    <aura:attribute name="esigType" type="String"/>
+    <aura:attribute name="comments" type="String"/>
+    <aura:attribute name="authPassed" type="Boolean" default="false"/>
+    <aura:attribute name="errorMessage" type="String" default=""/>
+    
+    <lightning:card title="{!v.title}">
+        <form id="approve-auth">
+            <lightning:layout class="slds-p-around--small">
+                <lightning:layoutItem>
+                    
+                    <lightning:textarea name="comments"
+                                        label="Comments"
+                                        value="{!v.comments}"/>
+
+                    <lightning:input type="password"
+                                     label="{!v.passwordLabel}"
+                                     name="reAuth"
+                                     value="{!v.password}"
+                                     placeholder="Enter Password"/>
+                    
+                    <lightning:button label="{!v.buttonLabel}"
+                                      variant="brand" 
+                                      class="slds-m-vertical--medium"
+                                      onclick="{!c.checkAuthApprove}"/>
+                    <lightning:button label="{!v.buttonDeclineLabel}"
+                                      variant="brand"
+                                      class="slds-m-vertical--medium"
+                                      onclick="{!c.checkAuthDecline}"/>
+                    
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+            <lightning:layout class="slds-p-horizontal_small">
+                <lightning:layoutItem>
+                    
+                    <aura:if isTrue="{!v.authPassed == true}">
+                        Authentication Passed
+                    </aura:if>
+                    
+                    <aura:if isTrue="{!v.errorMessage != ''}">
+                        Authentication Failed: {!v.errorMessage}
+                    </aura:if>
+                    
+                </lightning:layoutItem>
+            </lightning:layout>
+        </form>
+    </lightning:card>
+    
+</aura:component>

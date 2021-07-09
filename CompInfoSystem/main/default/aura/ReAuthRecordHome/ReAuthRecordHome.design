@@ -1,0 +1,7 @@
+<design:component label="ReAuth for Record Home">
+    <design:attribute name="fieldName" label="Field Name API" description="Field Name of the related object, API version" />
+    <design:attribute name="title" label="Title" default="Electronic Signature Approval" description="Title of the Card" />
+    <design:attribute name="passwordLabel" label="Password Input Label" default="Enter Password" description="Label for the Password Input" />
+    <design:attribute name="buttonLabel" label="Approve Button Label" default="Approve" description="Label for the Approval Button" />
+    <design:attribute name="buttonDeclineLabel" label="Decline Button Label" default="Decline" description="Label for the Decline Button" />
+</design:component>
