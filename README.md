@@ -6,9 +6,11 @@ Sample POC for Platform
 
 Follow the steps in orgInit.sh for list of packages used, and full reference is below for the source of those packages.
 
+Data is not stored here, please create your own test data.
+
 ## Packages Used
 
-### FlkowActionsBasePack / FlowScreenComponentsBasePack
+### FlowActionsBasePack / FlowScreenComponentsBasePack
 
 <https://unofficialsf.com/flow-action-and-screen-component-basepacks/>
 
